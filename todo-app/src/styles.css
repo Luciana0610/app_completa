@@ -1,166 +1,192 @@
 /* ======== REGLAS GENERALES ======== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Fuente más suave */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
 body {
-  background: #f4f4f4;
-  padding: 20px;
-  color: #333;
+    /* Fondo muy suave y rosado */
+    background: #fdf6f9; 
+    padding: 20px;
+    color: #444; /* Texto un poco más oscuro */
 }
 
-.content {
-  max-width: 800px;
-  margin: auto;
-  padding: 25px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+/* ======== CONTENEDOR PRINCIPAL / CAJAS ======== */
 
-/* ======== CONTENEDOR GENERAL ======== */
-.container {
-  max-width: 700px;
-  margin: auto;
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.content, .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px; /* Más padding */
+    background: #ffffff;
+    border-radius: 15px; /* Bordes más redondeados */
+    /* Sombra más elegante */
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.15); 
 }
 
 /* ======== TITULOS ======== */
 h1, h2 {
-  margin-bottom: 15px;
-  color: #333;
+    margin-bottom: 20px;
+    color: #ff69b4; /* Color principal: Fucsia */
+    font-weight: 600;
 }
 
 /* ======== NAV EN HOME ======== */
 nav a {
-  text-decoration: none;
-  margin-right: 15px;
-  font-size: 18px;
-  color: #007bff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 1.1em;
+    color: #b366ff; /* Tono violeta/malva para enlaces */
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+    color: #ff69b4; /* Fucsia al pasar el ratón */
+    text-decoration: underline;
 }
 
 /* ======== LISTA DE TODOS ======== */
 ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
 }
 
 li {
-  background: #fff;
-  padding: 12px 15px;
-  margin-bottom: 8px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-left: 5px solid #007bff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Fondo muy claro, rosado pastel */
+    background: #fffafa; 
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Línea de acento fucsia suave */
+    border-left: 6px solid #ffb6c1; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover suave en la lista */
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
 }
 
 li.completed {
-  background: #e6ffe6;
-  border-left: 5px solid #28a745;
+    /* Fondo de completado: Rosado más oscuro */
+    background: #f0e0f0; 
+    border-left: 6px solid #b366ff; /* Tono malva al completar */
 }
 
 /* ======== TEXTO DEL TODO ======== */
 li span {
-  flex: 1;
-  margin-right: 15px;
+    flex: 1;
+    margin-right: 20px;
+    font-size: 1em;
 }
 
 /* ======== BOTONES ======== */
 button {
-  cursor: pointer;
-  border: none;
-  padding: 7px 10px;
-  margin-left: 8px;
-  border-radius: 5px;
-  transition: 0.2s;
+    cursor: pointer;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.1s;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: white; /* Texto blanco en todos los botones de acción */
 }
 
-/* Botón completar */
+/* Botón completar (Verde -> Morado Suave) */
 button:first-of-type {
-  background: #28a745;
-  color: white;
+    background: #9370db; /* Morado Suave (MediumPurple) */
 }
 
 button:first-of-type:hover {
-  background: #1f7a34;
+    background: #7b68ee; /* Morado más vivo */
 }
 
-/* Botón eliminar */
+/* Botón eliminar (Rojo -> Rosa Oscuro) */
 button:last-of-type {
-  background: #dc3545;
-  color: white;
+    background: #dc143c; /* Rojo Oscuro (Crimson) */
 }
 
 button:last-of-type:hover {
-  background: #b52a37;
+    background: #b80c33; /* Rojo más intenso */
 }
 
 /* ======== FORMULARIOS ======== */
 form {
-  margin-top: 15px;
+    margin-top: 20px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #bbb;
-  margin-bottom: 15px;
-  font-size: 16px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ffb6c1; /* Borde rosa suave */
+    margin-bottom: 15px;
+    font-size: 1em;
+    transition: border-color 0.3s;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #ff69b4; /* Fucsia al enfocar */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.2);
+}
+
+/* Botón Submit */
 button[type="submit"] {
-  background: #007bff;
-  color: white;
-  padding: 10px 18px;
+    background: #ff69b4; /* Fucsia */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1em;
 }
 
 button[type="submit"]:hover {
-  background: #0666cd;
+    background: #e04a9e; /* Fucsia más oscuro */
 }
 
-/* ======== PLACEHOLDERS ======== */
+/* ======== PLACEHOLDERS (Texto Guía) ======== */
 .placeholder {
-  padding: 10px;
-  background: #e8e8e8;
-  border-left: 4px solid #888;
-  border-radius: 6px;
+    padding: 15px;
+    background: #ffe6f2; /* Fondo rosa pálido */
+    border-left: 4px solid #ff69b4; /* Fucsia */
+    border-radius: 8px;
+    color: #777;
 }
 
 /* ======== FILTROS (placeholder) ======== */
 .filters {
-  background: #fff3cd;
-  padding: 10px;
-  border-left: 5px solid #ffcc00;
-  border-radius: 8px;
-  margin-bottom: 15px;
+    background: #f8e6ff; /* Fondo malva muy pálido */
+    padding: 15px;
+    border-left: 5px solid #b366ff; /* Malva */
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
+
+/* Estilo general para todos los botones que no sean los de acción (ej: en filtros) */
 button {
-  background: #007bff;
-  color: white;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
+    background: #b366ff; /* Malva */
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
 }
 
 button:hover {
-  background: #0056b3;
+    background: #934cff; /* Malva más oscuro */
 }
+
